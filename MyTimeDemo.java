@@ -1,7 +1,12 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Kevin Baker
+ * Java Programming
+ * Summer 2015
+ * 1 June 2015
+ * 
+ * The purpose of this program is to display time in different formats using
+ * MyTime class. It also can check to see if the user created object
+ * is the same as a predefined object, similar to an alarm.
  */
 package Homework3;
 

@@ -1,18 +1,16 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package Homework3;
 
-/**
- * MyTime - a simple time class
- *
- * Add code to replace the temporary 'return' statements in the methods,
- * and additional parameter checking code in the setTime method, etc.
- * The temporary 'return' statements are needed to compile OK until
- * you replace them with the actual code.
- */
+/*
+MyTime class, represents a 24 hour clock.
+Functions:
+	setTime: checks for out of range values and adjusts accordingly
+	getHour, getMinute, getSecond: returns respective values
+	equals: checks to see if this objects parameters are the same as others
+  toString: formats the time in a 12 hour format
+	toUniversalString: formats the time in a 24 hour format
+	twoDigits: formats each item to ensure it has 2 digits ie 9 am is 09
+*/
 public class MyTime
 {
     // Instance variables holding the time (in 24 hour universal form).
@@ -121,20 +119,19 @@ public class MyTime
         // into HH:MM:SS AM/PM time (hour ranges from 1 to 12, AM or PM)
         // as a string and return it. Call the twoDigits() method to
         // convert each int value to String.
-				int shortHour;
-				String amOrPm;
+				int shortHour = 12;
+				String amOrPm = "AM";
 				if(mHour > 12){
 					shortHour = mHour - 12;
 					amOrPm = "PM";							
 				}
-				else if(mHour == 0){
+				else if (mHour == 12)
+					amOrPm = "PM";
+				else if (mHour == 0)
 					shortHour = 12;
-					amOrPm = "AM";
-				}
-				else{
+				else
 					shortHour = mHour;
-					amOrPm = "AM";
-				}
+				
         String result = twoDigits(shortHour) + ":" +
 											twoDigits(mMinute) + ":" +
 											twoDigits(mSecond) + " " +
