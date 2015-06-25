@@ -1,0 +1,54 @@
+run:
+How big will the array be? Limit between 3 and 10.
+9
+You've chosen: 9
+Enter number to be entered into array: 
+1000
+Enter number to be entered into array: 
+-200
+Enter number to be entered into array: 
+500
+Enter number to be entered into array: 
+150
+Enter number to be entered into array: 
+600
+Enter number to be entered into array: 
+800
+Enter number to be entered into array: 
+150
+Enter number to be entered into array: 
+50
+Enter number to be entered into array: 
+-25
+Your array is as follows: [1000, -200, 500, 150, 600, 800, 150, 50, -25]
+Your array is as follows: [-200, -25, 50, 150, 150, 500, 600, 800, 1000]
+BUILD SUCCESSFUL (total time: 18 seconds)
+
+
+run:
+How big will the array be? Limit between 3 and 10.
+10
+You've chosen: 10
+Enter number to be entered into array: 
+-1000
+Enter number to be entered into array: 
+5000
+Enter number to be entered into array: 
+-56
+Enter number to be entered into array: 
+4139
+Enter number to be entered into array: 
+41
+Enter number to be entered into array: 
+0
+Enter number to be entered into array: 
+-8484
+Enter number to be entered into array: 
+8484
+Enter number to be entered into array: 
+4562
+Enter number to be entered into array: 
+-4821
+Your unsorted array is as follows: [-1000, 5000, -56, 4139, 41, 0, -8484, 8484, 4562, -4821]
+Your sorted array is as follows: [-8484, -4821, -1000, -56, 0, 41, 4139, 4562, 5000, 8484]
+BUILD SUCCESSFUL (total time: 31 seconds)
