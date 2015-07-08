@@ -1,0 +1,165 @@
+run:
+
+Testing ArrayUtils class exception handling - 2/07/2014
+
+
+--- Testing minValue method ---
+
+Getting minVal of a null array
+  OK - minValue threw exception for null array: Homework7.BadArrayException: Array is null
+
+Getting minVal of an empty array
+  OK - minValue threw exception for empty array: Homework7.BadArrayException: Array is empty
+
+Getting minVal() of: [10]
+  OK - expected minValue to return 10 and got: 10
+
+Getting minVal() of: [20,30]
+  OK - expected minValue to return 20 and got: 20
+
+Getting minVal() of: [40,30]
+  OK - expected minValue to return 30 and got: 30
+
+Getting minVal() of: [10,10]
+  OK - expected minValue to return 10 and got: 10
+
+Getting minVal() of: [15,25,35]
+  OK - expected minValue to return 15 and got: 15
+
+Getting minVal() of: [25,20,30]
+  OK - expected minValue to return 20 and got: 20
+
+Getting minVal() of: [50,40,30]
+  OK - expected minValue to return 30 and got: 30
+
+Getting minVal() of: [50,-10,40,-25,50,40,30]
+  OK - expected minValue to return -25 and got: -25
+
+Getting minVal() of: [200,50,-40,60,-15,30,75]
+  OK - expected minValue to return -40 and got: -40
+
+--- Testing copyRange method ---
+
+Getting copyRange of a null array
+  OK - copyRange threw exception for null array: Homework7.BadArrayException: Array is null
+
+Getting copyRange(list,-1) of: []
+  OK - copyRange threw exception java.lang.ArrayIndexOutOfBoundsException: Array index out of range: -1
+
+Getting copyRange(list,0) of: []
+  OK - copyRange copied the array correctly as []
+
+Getting copyRange(list,1) of: []
+  OK - copyRange threw exception java.lang.ArrayIndexOutOfBoundsException: Array index out of range: 1
+
+Getting copyRange(list,-1) of: [20]
+  OK - copyRange threw exception java.lang.ArrayIndexOutOfBoundsException: Array index out of range: -1
+
+Getting copyRange(list,0) of: [20]
+  OK - copyRange copied the array correctly as [20]
+
+Getting copyRange(list,1) of: [20]
+  OK - copyRange copied the array correctly as []
+
+Getting copyRange(list,2) of: [20]
+  OK - copyRange threw exception java.lang.ArrayIndexOutOfBoundsException: Array index out of range: 2
+
+Getting copyRange(list,-1) of: [10,15]
+  OK - copyRange threw exception java.lang.ArrayIndexOutOfBoundsException: Array index out of range: -1
+
+Getting copyRange(list,0) of: [10,15]
+  OK - copyRange copied the array correctly as [10,15]
+
+Getting copyRange(list,1) of: [10,15]
+  OK - copyRange copied the array correctly as [15]
+
+Getting copyRange(list,2) of: [10,15]
+  OK - copyRange copied the array correctly as []
+
+Getting copyRange(list,3) of: [10,15]
+  OK - copyRange threw exception java.lang.ArrayIndexOutOfBoundsException: Array index out of range: 3
+
+Getting copyRange(list,-1) of: [30,35,40,45,50]
+  OK - copyRange threw exception java.lang.ArrayIndexOutOfBoundsException: Array index out of range: -1
+
+Getting copyRange(list,0) of: [30,35,40,45,50]
+  OK - copyRange copied the array correctly as [30,35,40,45,50]
+
+Getting copyRange(list,1) of: [30,35,40,45,50]
+  OK - copyRange copied the array correctly as [35,40,45,50]
+
+Getting copyRange(list,2) of: [30,35,40,45,50]
+  OK - copyRange copied the array correctly as [40,45,50]
+
+Getting copyRange(list,3) of: [30,35,40,45,50]
+  OK - copyRange copied the array correctly as [45,50]
+
+Getting copyRange(list,4) of: [30,35,40,45,50]
+  OK - copyRange copied the array correctly as [50]
+
+Getting copyRange(list,5) of: [30,35,40,45,50]
+  OK - copyRange copied the array correctly as []
+
+Getting copyRange(list,6) of: [30,35,40,45,50]
+  OK - copyRange threw exception java.lang.ArrayIndexOutOfBoundsException: Array index out of range: 6
+
+--- Testing indexOf and lastIndexOf method ---
+
+Getting indexOf of a null array
+  OK - indexOf threw exception for null array: Homework7.BadArrayException: Array is null
+
+Getting lastIndexOf of a null array
+  OK - lastIndexOf threw exception for null array: Homework7.BadArrayException: Array is null
+
+Getting indexOf(5) of: []
+  OK - expected indexOf to return -1 and got: -1
+
+Getting lastIndexOf(5) of: []
+  OK - expected lastIndexOf to return -1 and got: -1
+
+Getting indexOf(20) of: [20]
+  OK - expected indexOf to return 0 and got: 0
+
+Getting indexOf(25) of: [20]
+  OK - expected indexOf to return -1 and got: -1
+
+Getting lastIndexOf(20) of: [20]
+  OK - expected lastIndexOf to return 0 and got: 0
+
+Getting lastIndexOf(25) of: [20]
+  OK - expected lastIndexOf to return -1 and got: -1
+
+Getting indexOf(5) of: [5,10,15,20,10,15,5,10,15,20]
+  OK - expected indexOf to return 0 and got: 0
+
+Getting indexOf(10) of: [5,10,15,20,10,15,5,10,15,20]
+  OK - expected indexOf to return 1 and got: 1
+
+Getting indexOf(15) of: [5,10,15,20,10,15,5,10,15,20]
+  OK - expected indexOf to return 2 and got: 2
+
+Getting indexOf(20) of: [5,10,15,20,10,15,5,10,15,20]
+  OK - expected indexOf to return 3 and got: 3
+
+Getting indexOf(0) of: [5,10,15,20,10,15,5,10,15,20]
+  OK - expected indexOf to return -1 and got: -1
+
+Getting lastIndexOf(5) of: [5,10,15,20,10,15,5,10,15,20]
+  OK - expected lastIndexOf to return 6 and got: 6
+
+Getting lastIndexOf(10) of: [5,10,15,20,10,15,5,10,15,20]
+  OK - expected lastIndexOf to return 7 and got: 7
+
+Getting lastIndexOf(15) of: [5,10,15,20,10,15,5,10,15,20]
+  OK - expected lastIndexOf to return 8 and got: 8
+
+Getting lastIndexOf(20) of: [5,10,15,20,10,15,5,10,15,20]
+  OK - expected lastIndexOf to return 9 and got: 9
+
+Getting lastIndexOf(0) of: [5,10,15,20,10,15,5,10,15,20]
+  OK - expected lastIndexOf to return -1 and got: -1
+
+Done - press enter key to end program
+
+
+BUILD SUCCESSFUL (total time: 2 minutes 0 seconds)
