@@ -1,0 +1,40 @@
+"Ode to 'Real' Programmers"
+
+Real programmers don't do documentation.
+Users should consider themselves lucky to get any programs at all,
+and take what they get.
+
+Real
+     programmers
+                 don't
+                       comment
+                               their
+                                     code.
+If it was hard to write, it should be hard to understand.
+Real programmers don't need comments - the code is obvious.
+
+Real programmers don't eat quiche.
+They eat twinkies,
+M & M's,
+Snickers, Ring-Dings,
+         and other healthful food.
+
+Real programmers don't play tennis, or any other sport which requires you
+to change clothes.
+Mountain climbing is OK, and real programmers wear their hiking boots to
+work in case a mountain should suddenly spring up in the middle of the room.
+
+Real programmers don't wear neckties
+
+Real programmer's programs never work the first time.
+But if you throw them on the computer, they can be patched in only a few
+30 hour debugging sessions.
+
+Real programmers never work 9 to 5.  If they are around at 9 A.M., its
+because they were up all night.
+
+Real programmers don't write in Pascal, ADA, Bliss, or any of those silly
+'strongly typed' languages.
+Strong typing is for people with weak memories.
+
+Real programmers arrive at work in time for lunch.
