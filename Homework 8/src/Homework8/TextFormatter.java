@@ -1,14 +1,18 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Kevin Baker
+ * Java Programming
+ * Summer 2015
+ * 16 July 2015
+ * 
+ * The purpose of this program is to take a text file with some text in it,
+ * remove any extra whitespace, and fill each line with a user designated
+ * column width.
  */
 package Homework8;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
-import java.io.Reader;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -17,19 +21,21 @@ import java.io.StringReader;
 import java.util.Scanner;
 /**
  *
- * @author Kevin
+ * @author Kevin Baker
  */
 public class TextFormatter {
 	public static void main(String[] args)
 	throws FileNotFoundException, IOException {
 				Scanner sc = new Scanner(System.in);
 		
+		// Prompt for the desired width of the output file, check to make sure between 30 and 100
 		int width;
 		do {
 		System.out.println("Enter the maximum formatted output width (30-100 characters)");
 		width = sc.nextInt();
 		} while(width < 30 || width > 100);
 		
+		// Prompt for the input text file name, check to make sure it exists
 		int validFileName;
 		BufferedReader inputFileReader = null;
 		do {
@@ -55,6 +61,7 @@ public class TextFormatter {
 			String outputFileName = sc.next();
 			File f = new File(outputFileName);
 			if(f.exists() && !f.isDirectory()){
+				//make sure the user is ok with overwriting the output file
 				System.out.println("File exists, overwrite? (Y or N)");
 				String choice = sc.next();
 				if ("Y".equals(choice) || "y".equals(choice)){
@@ -80,32 +87,30 @@ public class TextFormatter {
 			} // end else
 		} while(validFileName == 0);
 		
-		outFileWriter.println("Formatted output text follows...\n");
-		for(int i = 0; i < width; i++){
+		outFileWriter.println("Formatted output text follows...");
+		outFileWriter.println();
+		for(int i = 0; i < width; i++)
 			outFileWriter.print("*");
-		}
+		outFileWriter.println();
 		outFileWriter.println();
 		
-		//String line = null;
-		//while((line = inputFileReader.readLine()) != null){
-		//	outFileWriter.println(line);
-		//}
-	//	String tst = "test";
-	//	outFileWriter.println(tst);
-		
-		Scanner scan = new Scanner(inputFileReader);
-		String line = "";
+		// use a scanner for the input file, scan each item in the input text file
+		// that's seperated by a space. print out lines according to the max
+		// width that was provided by the user
+		Scanner sc2 = new Scanner(inputFileReader);
+		String tmp, line = "";
 		StringReader sr = null;
-		while(scan.hasNext()){
-			if(line.length() + (scan.next()).length() > width){
-				sr = new StringReader(line);
-				BufferedReader br = new BufferedReader(sr);
-				outFileWriter.println(br);
-				line = "";
+		while(sc2.hasNext()){
+			tmp = sc2.next();
+			if(line.length() + tmp.length() > width){
+				outFileWriter.println(line);
+				line = tmp + " ";
 			} 
-			else
-				line = line + scan.next() + " ";
-		}
+			else{
+				line = line + tmp + " ";
+			}
+		} // end while
+		outFileWriter.println(line); // print whatever is leftover
 		outFileWriter.close();
 	} // end main
 } // end class
